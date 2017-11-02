@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="text_current_weather">Current Weather</string>
+    <string name="text_search_weather">Search Weather</string>
+    <string name="text_load">Load</string>
+    <string name="text_access">Access denied</string>
+</resources>
