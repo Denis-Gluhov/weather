@@ -1,4 +1,4 @@
-package denis.ru.weather;
+package denis.ru.weather.utils;
 
 import android.Manifest;
 import android.content.Context;
@@ -30,7 +30,7 @@ public final class LocationManager implements LocationListener {
 
     private LocationManager(Context context) {
         this.context = context;
-        Log.d("LOCATION_MANAGER","LocationManager");
+        //Log.d("LOCATION_MANAGER","LocationManager");
         this.locationManager = (android.location.LocationManager) this.context.getSystemService(Context.LOCATION_SERVICE);
     }
 
@@ -49,7 +49,7 @@ public final class LocationManager implements LocationListener {
             }
         }
 
-        Log.d("LOCATION_MANAGER","startLocationListening");
+        //Log.d("LOCATION_MANAGER","startLocationListening");
     }
 
     public void stopLocationListening() {
@@ -57,16 +57,16 @@ public final class LocationManager implements LocationListener {
             locationManager.removeUpdates(this);
             isStarted = false;
         }
-        Log.d("LOCATION_MANAGER","stopLocationListening");
+        //Log.d("LOCATION_MANAGER","stopLocationListening");
     }
 
     @Nullable
     public Location getLastKnownLocation() {
         if (lastKnownLocation != null) {
-            Log.d("LAST CHANGE", "PROVIDER "+lastKnownLocation.getProvider());
+            /*Log.d("LAST CHANGE", "PROVIDER "+lastKnownLocation.getProvider());
             Log.d("LAST LOCATION", "LATLNG " + lastKnownLocation.getLatitude() + " " + lastKnownLocation.getLongitude());
             Log.d("LAST LOCATION", "SPEED " + lastKnownLocation.getSpeed());
-            Log.d("LAST LOCATION", "BEARING " + lastKnownLocation.getBearing());
+            Log.d("LAST LOCATION", "BEARING " + lastKnownLocation.getBearing());*/
 
             return lastKnownLocation;
         }
@@ -76,10 +76,10 @@ public final class LocationManager implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        Log.d("LOCATION CHANGE", "PROVIDER "+location.getProvider());
+        /*Log.d("LOCATION CHANGE", "PROVIDER "+location.getProvider());
         Log.d("LOCATION CHANGE", "LATLNG " + location.getLatitude() + " " + location.getLongitude());
         Log.d("LOCATION CHANGE", "SPEED " + location.getSpeed());
-        Log.d("LOCATION CHANGE", "BEARING " + location.getBearing());
+        Log.d("LOCATION CHANGE", "BEARING " + location.getBearing());*/
 
         if (isBetterLocation(location, lastKnownLocation)) {
             lastKnownLocation = location;

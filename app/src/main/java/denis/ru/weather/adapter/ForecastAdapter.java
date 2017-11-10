@@ -23,9 +23,8 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
     private LayoutInflater inflater;
     private Context context;
 
-    public ForecastAdapter(Context context, Forecast forecast) {
+    public ForecastAdapter(Context context) {
         this.context = context;
-        this.forecastdayList = forecast.getSimpleforecast().getForecastday();
         inflater = LayoutInflater.from(context);
     }
 
@@ -37,21 +36,29 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     @Override
     public void onBindViewHolder(ForecastViewHolder holder, int position) {
-        Forecastday_ forecastday = forecastdayList.get(position);
-        holder.dateForecast.setText(forecastday.getDate().getDay() + " " +
-                forecastday.getDate().getMonthname() + " " + forecastday.getDate().getYear());
-        holder.weekDay.setText(forecastday.getDate().getWeekday());
-        holder.temperHigh.setText("High : " + forecastday.getHigh().getCelsius() +
-                " C (" + forecastday.getHigh().getFahrenheit() + " F)");
-        holder.temperLow.setText("Low : " + forecastday.getLow().getCelsius() +
-                " C (" + forecastday.getLow().getFahrenheit() + " F)");
-        holder.conditions.setText(forecastday.getConditions());
-        holder.setImage(forecastday.getIconUrl());
+        if (forecastdayList != null && forecastdayList.size() > 0) {
+            Forecastday_ forecastday = forecastdayList.get(position);
+            holder.dateForecast.setText(forecastday.getDate().getDay() + " " +
+                    forecastday.getDate().getMonthname() + " " + forecastday.getDate().getYear());
+            holder.weekDay.setText(forecastday.getDate().getWeekday());
+            holder.temperHigh.setText("High : " + forecastday.getHigh().getCelsius() +
+                    " C (" + forecastday.getHigh().getFahrenheit() + " F)");
+            holder.temperLow.setText("Low : " + forecastday.getLow().getCelsius() +
+                    " C (" + forecastday.getLow().getFahrenheit() + " F)");
+            holder.conditions.setText(forecastday.getConditions());
+            holder.setImage(forecastday.getIconUrl());
+        }
+    }
+
+    public void setData(Forecast data) {
+        forecastdayList = data.getSimpleforecast().getForecastday();
     }
 
     @Override
     public int getItemCount() {
-        return forecastdayList.size();
+        if (forecastdayList == null)
+            return 0;
+        else return forecastdayList.size();
     }
 
     class ForecastViewHolder extends RecyclerView.ViewHolder{

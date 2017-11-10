@@ -1,4 +1,4 @@
-package denis.ru.weather.activities;
+package denis.ru.weather.screens.main.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,36 +9,49 @@ import android.view.View;
 import android.widget.Button;
 
 import denis.ru.weather.R;
+import denis.ru.weather.screens.current.view.CurrentActivity;
+import denis.ru.weather.screens.main.presenter.MainPresenter;
+import denis.ru.weather.screens.search.view.SearchActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainView {
 
-    private Toolbar toolbar;
-
+    private MainPresenter presenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        presenter = new MainPresenter(this);
         initToolbar();
 
         Button btnCurrentWeather = (Button) this.findViewById(R.id.btn_current_weather);
         btnCurrentWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CurrentWeatherActivity.class));
+                presenter.onClickFromOpenCurrentActivity();
             }
         });
         Button btnSearchWeather = (Button) this.findViewById(R.id.btn_search_weather);
         btnSearchWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SearchWeatherActivity.class));
+                presenter.onClickFromOpenSearchActivity();
             }
         });
     }
 
     private void initToolbar(){
-        toolbar = (Toolbar) this.findViewById(R.id.toolbar_main);
+        Toolbar toolbar = (Toolbar) this.findViewById(R.id.toolbar_main);
         toolbar.setTitle(this.getString(R.string.app_name));
+    }
+
+    @Override
+    public void onOpenCurrentActivity() {
+        startActivity(new Intent(MainActivity.this, CurrentActivity.class));
+    }
+
+    @Override
+    public void onOpenSearchActivity() {
+        startActivity(new Intent(MainActivity.this, SearchActivity.class));
     }
 }

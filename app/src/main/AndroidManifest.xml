@@ -8,22 +8,21 @@
 
     <application
         android:allowBackup="true"
-        android:name="denis.ru.weather.App"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="denis.ru.weather.activities.MainActivity">
+        <activity android:name="denis.ru.weather.screens.main.view.MainActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
 
-        <activity android:name="denis.ru.weather.activities.CurrentWeatherActivity"/>
-        <activity android:name="denis.ru.weather.activities.SearchWeatherActivity"/>
+        <activity android:name="denis.ru.weather.screens.current.view.CurrentActivity"/>
+        <activity android:name="denis.ru.weather.screens.search.view.SearchActivity"/>
 
     </application>
 

@@ -5,4 +5,5 @@
     <string name="text_search_weather">Search Weather</string>
     <string name="text_load">Load</string>
     <string name="text_access">Access denied</string>
+    <string name="text_ok">OK</string>
 </resources>

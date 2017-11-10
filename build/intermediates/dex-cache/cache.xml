@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_9869f71e3a67e710332fefab56409a0e52bb5561.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/program_files/android_sdk/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_89abed1e386f00a0c0c75a12073d44f938258f8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.3.1_caae36ba22319660daf77fe48fd4c9c72f9428d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.3.1_f01dbba194d41cc5f36131f36253cd6b3d567ee1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_f1666456c57ae60a17105c9cafa4830e9c722d0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/gson-2.7_ac3e959a2db0ce353bb119405d7a6da78cde629f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_6542bd2fabdb3e3b755f6dc4f928945fbd4d7d5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.3.1_0b8805be401be7008547c847e01da4a87da6d0fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/bcacde6a8ccedcc56c127403d26b76072fe6214d/retrofit-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bcacde6a8ccedcc56c127403d26b76072fe6214d">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/retrofit-2.3.0_52dc89f1007c4db1ff73813981d08d49d8f1dcd1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.3.0/9e09011e9767bb76b5e27c9b8223476b93b14631/converter-gson-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e09011e9767bb76b5e27c9b8223476b93b14631">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/converter-gson-2.3.0_00fec91ea88de82e990bd898b78ab479a58f9499.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.3.1_4415b9eaf989b3e41c911d83806e6e87d5591194.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_b046eef7b92de1d8f319b774fc0b388c2eacc15d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0/14b8c877d98005ba3941c9257cfe09f6ed0e0d74/reactive-streams-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.0_1625cbb29f875596733b9cc885add2714003512a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/rxjava-1.1.6_e0f2a65c985e1c8d61f03911579358c37a2c68e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_96e4f98626613de3e5b4a92e20cc09aa6bfc32e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.2.1_8234f281bb5d2ec8d58aea93804fe55d8b566d07.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_99b7638f42496e4407f29ebea3a25f1912936c3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.1.0_ab644099948c9812e067a11c77bdf3667b7ca81d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.0/2fdf84dedcaaeabb9d70cde9dbb8aad4eccb80a1/rxjava-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2fdf84dedcaaeabb9d70cde9dbb8aad4eccb80a1">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/rxjava-2.1.0_77e09243b7845b6fbb82e4748476d6235277edf3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_06ad17478caed86a8cb3a80a0c171b12398e84ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/okio-1.13.0_f2ee25c5657823f6f9dccbb49ffd019bdecd2652.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/.gradle (4)/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5a11f020cce2d11eb71ba916700600e18c4547e7">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/okhttp-3.8.0_aa8109fe0d686ee6f5b54f1a30d3f3c3b7239827.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.1_310449c6dd6c12f910d58cd53639a5393500f81d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.1_4f1691172582550a6c11c67052504a21b0a2b01b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/gluhov_da/androidWorkspace/app_weather/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_3bc4644ee83c273800bb0819502057a3855ffba4.jar" />
+    </item>
+
+</items>
