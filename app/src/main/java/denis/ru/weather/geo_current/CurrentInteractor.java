@@ -6,6 +6,9 @@ import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 
+import javax.inject.Inject;
+
+import denis.ru.weather.App;
 import denis.ru.weather.R;
 import denis.ru.weather.model.Forecast10Day;
 import denis.ru.weather.model.repository.Network;
@@ -22,13 +25,13 @@ public class CurrentInteractor implements CurrentContract.Interactor {
     private static final int REQUEST_PERMISSION = 1;
 
     private final CurrentContract.Presenter presenter;
-    private final Network network;
+    @Inject
+    Network network;
     private final Context context;
 
     public CurrentInteractor(@NonNull CurrentContract.Presenter presenter, @NonNull Context context) {
         this.presenter = presenter;
         this.context = context;
-        this.network = new NetworkImpl();
     }
 
     @Override
