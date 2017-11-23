@@ -11,15 +11,22 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import javax.inject.Inject;
+
+import denis.ru.weather.App;
 import denis.ru.weather.R;
 import denis.ru.weather.adapter.ForecastAdapter;
 import denis.ru.weather.model.Forecast;
+import denis.ru.weather.repository.ForecastRepository;
 
 public class CurrentActivity extends AppCompatActivity implements CurrentContract.View {
 
     private CurrentPresenter presenter;
     private ForecastAdapter forecastAdapter;
     private SwipeRefreshLayout swipeRefresh;
+
+    @Inject
+    ForecastRepository forecastRepository;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,7 +42,9 @@ public class CurrentActivity extends AppCompatActivity implements CurrentContrac
         recyclerView.setLayoutManager(new LinearLayoutManager(CurrentActivity.this));
         recyclerView.setAdapter(forecastAdapter);
 
-        presenter = new CurrentPresenter(this, this);
+        App.getAppComponent().inject(this);
+
+        presenter = new CurrentPresenter(this, this, forecastRepository);
         presenter.onLoad();
     }
 

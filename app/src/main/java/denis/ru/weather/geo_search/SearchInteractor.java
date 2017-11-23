@@ -1,15 +1,15 @@
 package denis.ru.weather.geo_search;
 
-import denis.ru.weather.model.repository.Network;
-import denis.ru.weather.model.repository.NetworkImpl;
+import denis.ru.weather.repository.ForecastRepository;
+import denis.ru.weather.repository.ForecastRepositoryImpl;
 
 public class SearchInteractor implements SearchContract.Interactor {
 
     private final SearchContract.Presenter presenter;
-    private final Network network;
+    //private final ForecastRepository forecastRepository;
 
     public SearchInteractor(SearchContract.Presenter presenter) {
         this.presenter = presenter;
-        this.network = new NetworkImpl();
+        //this.forecastRepository = new ForecastRepositoryImpl();
     }
 }

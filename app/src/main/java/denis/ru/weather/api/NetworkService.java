@@ -1,4 +1,4 @@
-package denis.ru.weather.model.repository;
+package denis.ru.weather.api;
 
 
 import android.support.annotation.NonNull;

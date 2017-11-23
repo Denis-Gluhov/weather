@@ -6,13 +6,9 @@ import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 
-import javax.inject.Inject;
-
-import denis.ru.weather.App;
 import denis.ru.weather.R;
 import denis.ru.weather.model.Forecast10Day;
-import denis.ru.weather.model.repository.Network;
-import denis.ru.weather.model.repository.NetworkImpl;
+import denis.ru.weather.repository.ForecastRepository;
 import denis.ru.weather.utils.LocationManager;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -25,19 +21,20 @@ public class CurrentInteractor implements CurrentContract.Interactor {
     private static final int REQUEST_PERMISSION = 1;
 
     private final CurrentContract.Presenter presenter;
-    @Inject
-    Network network;
+    private final ForecastRepository forecastRepository;
     private final Context context;
 
-    public CurrentInteractor(@NonNull CurrentContract.Presenter presenter, @NonNull Context context) {
+    CurrentInteractor(@NonNull CurrentContract.Presenter presenter, @NonNull Context context,
+                      @NonNull ForecastRepository forecastRepository) {
         this.presenter = presenter;
         this.context = context;
+        this.forecastRepository = forecastRepository;
     }
 
     @Override
     public void loadData() {
         if (isPermissionGranted(PERMISSION_FINE_LOCATION, PERMISSION_COARSE_LOCATION)) {
-            Observable<Forecast10Day> data = network.getForecastFrom10(String.valueOf(getCurrentLocation().getLatitude()),
+            Observable<Forecast10Day> data = forecastRepository.getForecast10Day(String.valueOf(getCurrentLocation().getLatitude()),
                     String.valueOf(getCurrentLocation().getLongitude()));
             data.subscribeOn(Schedulers.newThread())
                     .observeOn(AndroidSchedulers.mainThread())

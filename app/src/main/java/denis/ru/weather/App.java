@@ -3,23 +3,22 @@ package denis.ru.weather;
 import android.app.Application;
 
 import denis.ru.weather.di.AppComponent;
+import denis.ru.weather.di.DaggerAppComponent;
+import denis.ru.weather.di.NetworkModule;
 
 public class App extends Application {
 
-    private static App app;
-    private AppComponent appComponent;
+    private static AppComponent appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        app = this;
+        appComponent = DaggerAppComponent.builder()
+                .networkModule(new NetworkModule())
+                .build();
     }
 
-    public static App app() {
-        return app;
-    }
-
-    public AppComponent getAppComponent() {
-        return this.appComponent;
+    public static AppComponent getAppComponent() {
+        return appComponent;
     }
 }

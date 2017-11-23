@@ -4,17 +4,17 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import denis.ru.weather.model.Forecast;
+import denis.ru.weather.repository.ForecastRepository;
 
 public class CurrentPresenter implements CurrentContract.Presenter {
 
     private final CurrentContract.View view;
     private final CurrentContract.Interactor interactor;
-    private final Context context;
 
-    CurrentPresenter(@NonNull CurrentContract.View view, @NonNull Context context) {
+    CurrentPresenter(@NonNull CurrentContract.View view, @NonNull Context context,
+                     @NonNull ForecastRepository forecastRepository) {
         this.view = view;
-        this.context = context;
-        this.interactor = new CurrentInteractor(this, context);
+        this.interactor = new CurrentInteractor(this, context, forecastRepository);
     }
 
     @Override
