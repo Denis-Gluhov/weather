@@ -1,20 +1,21 @@
 package denis.ru.weather.geo_current;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 
+import javax.inject.Inject;
+
 import denis.ru.weather.model.Forecast;
-import denis.ru.weather.repository.ForecastRepository;
 
 public class CurrentPresenter implements CurrentContract.Presenter {
 
     private final CurrentContract.View view;
     private final CurrentContract.Interactor interactor;
 
-    CurrentPresenter(@NonNull CurrentContract.View view, @NonNull Context context,
-                     @NonNull ForecastRepository forecastRepository) {
+    @Inject
+    CurrentPresenter(@NonNull CurrentContract.View view,
+                     @NonNull CurrentContract.Interactor interactor) {
         this.view = view;
-        this.interactor = new CurrentInteractor(this, context, forecastRepository);
+        this.interactor = interactor;
     }
 
     @Override

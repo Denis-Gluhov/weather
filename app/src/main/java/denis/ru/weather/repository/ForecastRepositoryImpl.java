@@ -15,15 +15,6 @@ public class ForecastRepositoryImpl implements ForecastRepository {
         this.service = service;
     }
 
-    //    public ForecastRepositoryImpl() {
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl(Const.BASE_URL)
-//                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//        service = retrofit.create(NetworkService.class);
-//    }
-
     @Override
     public Observable<Forecast10Day> getForecast10Day(@NonNull String latitude, @NonNull String longitude) {
         return service.getForecast10Day(latitude, longitude);

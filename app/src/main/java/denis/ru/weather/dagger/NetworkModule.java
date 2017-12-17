@@ -1,4 +1,4 @@
-package denis.ru.weather.di;
+package denis.ru.weather.dagger;
 
 import android.support.annotation.NonNull;
 

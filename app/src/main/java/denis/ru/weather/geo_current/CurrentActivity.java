@@ -14,19 +14,20 @@ import android.support.v7.widget.Toolbar;
 import javax.inject.Inject;
 
 import denis.ru.weather.App;
+import denis.ru.weather.BaseActivity;
 import denis.ru.weather.R;
 import denis.ru.weather.adapter.ForecastAdapter;
 import denis.ru.weather.model.Forecast;
 import denis.ru.weather.repository.ForecastRepository;
 
-public class CurrentActivity extends AppCompatActivity implements CurrentContract.View {
+public class CurrentActivity extends BaseActivity implements CurrentContract.View {
 
-    private CurrentPresenter presenter;
+    @Inject
+    CurrentPresenter presenter;
+
     private ForecastAdapter forecastAdapter;
     private SwipeRefreshLayout swipeRefresh;
 
-    @Inject
-    ForecastRepository forecastRepository;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,15 +38,18 @@ public class CurrentActivity extends AppCompatActivity implements CurrentContrac
         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_current);
         swipeRefresh.setOnRefreshListener(() -> presenter.onRefresh());
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view_current);
-        forecastAdapter = new ForecastAdapter(this);
-        recyclerView.setLayoutManager(new LinearLayoutManager(CurrentActivity.this));
-        recyclerView.setAdapter(forecastAdapter);
+//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view_current);
+//        forecastAdapter = new ForecastAdapter(this);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(CurrentActivity.this));
+//        recyclerView.setAdapter(forecastAdapter);
 
-        App.getAppComponent().inject(this);
 
-        presenter = new CurrentPresenter(this, this, forecastRepository);
         presenter.onLoad();
+    }
+
+    @Override
+    public void setupActivityComponent() {
+
     }
 
     @Override

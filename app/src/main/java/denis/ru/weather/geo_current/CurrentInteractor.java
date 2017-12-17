@@ -20,47 +20,45 @@ public class CurrentInteractor implements CurrentContract.Interactor {
     private static final String PERMISSION_COARSE_LOCATION = "android.permission.ACCESS_COARSE_LOCATION";
     private static final int REQUEST_PERMISSION = 1;
 
-    private final CurrentContract.Presenter presenter;
     private final ForecastRepository forecastRepository;
     private final Context context;
 
-    CurrentInteractor(@NonNull CurrentContract.Presenter presenter, @NonNull Context context,
+    CurrentInteractor(@NonNull Context context,
                       @NonNull ForecastRepository forecastRepository) {
-        this.presenter = presenter;
         this.context = context;
         this.forecastRepository = forecastRepository;
     }
 
     @Override
     public void loadData() {
-        if (isPermissionGranted(PERMISSION_FINE_LOCATION, PERMISSION_COARSE_LOCATION)) {
-            Observable<Forecast10Day> data = forecastRepository.getForecast10Day(String.valueOf(getCurrentLocation().getLatitude()),
-                    String.valueOf(getCurrentLocation().getLongitude()));
-            data.subscribeOn(Schedulers.newThread())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .doOnSubscribe(presenter::onShowProgress)
-                    .doAfterTerminate(presenter::onHideProgress)
-                    .subscribe(d -> presenter.onSetData(d.getForecast()),
-                            throwable -> presenter.onShowError(throwable.getMessage()));
-
-        } else {
-            presenter.onRequestPermission(PERMISSION_FINE_LOCATION, PERMISSION_COARSE_LOCATION, REQUEST_PERMISSION);
-        }
+//        if (isPermissionGranted(PERMISSION_FINE_LOCATION, PERMISSION_COARSE_LOCATION)) {
+//            Observable<Forecast10Day> data = forecastRepository.getForecast10Day(String.valueOf(getCurrentLocation().getLatitude()),
+//                    String.valueOf(getCurrentLocation().getLongitude()));
+//            data.subscribeOn(Schedulers.newThread())
+//                    .observeOn(AndroidSchedulers.mainThread())
+//                    .doOnSubscribe(presenter::onShowProgress)
+//                    .doAfterTerminate(presenter::onHideProgress)
+//                    .subscribe(d -> presenter.onSetData(d.getForecast()),
+//                            throwable -> presenter.onShowError(throwable.getMessage()));
+//
+//        } else {
+//            presenter.onRequestPermission(PERMISSION_FINE_LOCATION, PERMISSION_COARSE_LOCATION, REQUEST_PERMISSION);
+//        }
     }
 
     @Override
     public void responsePermission(int requestCode, @NonNull int[] grantResult) {
-        switch (requestCode) {
-            case REQUEST_PERMISSION:
-                if (grantResult.length > 0 && grantResult[0] == PackageManager.PERMISSION_GRANTED
-                        && grantResult[1] == PackageManager.PERMISSION_GRANTED) {
-                    loadData();
-                } else {
-                    presenter.onHideProgress();
-                    presenter.onShowError(context.getString(R.string.text_access));
-                }
-                break;
-        }
+//        switch (requestCode) {
+//            case REQUEST_PERMISSION:
+//                if (grantResult.length > 0 && grantResult[0] == PackageManager.PERMISSION_GRANTED
+//                        && grantResult[1] == PackageManager.PERMISSION_GRANTED) {
+//                    loadData();
+//                } else {
+//                    presenter.onHideProgress();
+//                    presenter.onShowError(context.getString(R.string.text_access));
+//                }
+//                break;
+//        }
     }
 
     private Location getCurrentLocation() {
