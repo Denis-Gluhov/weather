@@ -24,8 +24,8 @@ public class CurrentActivity extends BaseActivity implements CurrentContract.Vie
 
     @Inject
     CurrentPresenter presenter;
-
-    private ForecastAdapter forecastAdapter;
+    @Inject
+    ForecastAdapter forecastAdapter;
     private SwipeRefreshLayout swipeRefresh;
 
 
