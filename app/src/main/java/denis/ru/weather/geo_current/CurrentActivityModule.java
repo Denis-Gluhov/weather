@@ -8,11 +8,11 @@ import dagger.Provides;
 import denis.ru.weather.repository.ForecastRepository;
 
 @Module
-public class CurrentModule {
+public class CurrentActivityModule {
 
     private final CurrentContract.View view;
 
-    public CurrentModule(CurrentContract.View view) {
+    public CurrentActivityModule(CurrentContract.View view) {
         this.view = view;
     }
 

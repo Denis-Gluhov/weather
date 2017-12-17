@@ -33,8 +33,9 @@ public class CurrentActivity extends BaseActivity implements CurrentContract.Vie
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_geo);
-        initToolbar();
+        setupActivityComponent();
 
+        initToolbar();
         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_current);
         swipeRefresh.setOnRefreshListener(() -> presenter.onRefresh());
 
@@ -49,7 +50,13 @@ public class CurrentActivity extends BaseActivity implements CurrentContract.Vie
 
     @Override
     public void setupActivityComponent() {
+        App.getInstance().initCurrentComponent(this).inject(this);
+    }
 
+    @Override
+    protected void onDestroy() {
+        App.getInstance().destroyCurrentComponent();
+        super.onDestroy();
     }
 
     @Override

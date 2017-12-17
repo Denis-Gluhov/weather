@@ -1,9 +1,11 @@
 package denis.ru.weather.geo_current;
 
+import android.support.annotation.NonNull;
+
 import dagger.Subcomponent;
 
 @CurrentActivityScope
-@Subcomponent(modules = CurrentModule.class)
+@Subcomponent(modules = CurrentActivityModule.class)
 public interface CurrentActivityComponent {
-    void inject(CurrentActivity activity);
+    void inject(@NonNull CurrentActivity activity);
 }
